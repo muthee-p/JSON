@@ -22,10 +22,10 @@
           const productQuantity =document.createElement('p');
           const productPrice =document.createElement('p');
 
-          listItem.textContent = item.name;
-          listItem.textContent = 'Category: ${item.category}';
-          listItem.textContent = 'Quantity: ${item.quantity}';
-          listItem.textContent = 'Price: ${item.price}';
+          productName.textContent = item.name;
+          productCategory.textContent = 'Category: ${item.category}';
+          productQuantity.textContent = 'Quantity: ${item.quantity}';
+          productPrice.textContent = 'Price: ${item.price}';
 
           listItem.appendChild(productName);
           listItem.appendChild(productCategory);
