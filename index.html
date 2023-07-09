@@ -15,17 +15,17 @@
         const fullInventory = document.getElementById('full_inventory');
         
         // Loop through the users and create list items
-        data.inventory.forEach(item => {
+        data.inventory.forEach(product => {
           const listItem = document.createElement('li');
           const productName =document.createElement('h3');
           const productCategory =document.createElement('p');
           const productQuantity =document.createElement('p');
           const productPrice =document.createElement('p');
 
-          productName.textContent = item.name;
-          productCategory.textContent = `Category: ${item.category}`;
-          productQuantity.textContent = `Quantity: ${item.quantity}`;
-          productPrice.textContent = `Price: ${item.price}`;
+          productName.textContent = product.name;
+          productCategory.textContent = `Category: ${product.category}`;
+          productQuantity.textContent = `Quantity: ${product.quantity}`;
+          productPrice.textContent = `Price: ${product.price}`;
 
           listItem.appendChild(productName);
           listItem.appendChild(productCategory);
