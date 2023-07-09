@@ -9,7 +9,7 @@
 
   <script>
     // Fetch data from JSON file
-    fetch('/data.json')
+    fetch('./data.json')
       .then(response => response.json())
       .then(data => {
         const fullInventory = document.getElementById('full_inventory');
