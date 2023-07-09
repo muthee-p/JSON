@@ -6,10 +6,10 @@
 <body>
   <h1>Welcome</h1>
   <button>
-      <a href='register.html'>Register</a>
+      <a href='users/register.html'>Register</a>
     </button>
       <button>
-      <a href='login.html'>Login</a>
+      <a href='users/login.html'>Login</a>
     </button>
 
   <ul id="full_inventory"></ul>
@@ -17,7 +17,7 @@
  <h2>Inventory</h2>
   <script>
     // Fetch data from JSON file
-    fetch('./products/data.json')
+    fetch('../products/data.json')
       .then(response => response.json())
       .then(data => {
         const fullInventory = document.getElementById('full_inventory');
