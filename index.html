@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON Server</title>
+</head>
+<body>
+  <h1>Inventory</h1>
+  <ul id="full_inventory"></ul>
+
+  <script>
+    // Fetch data from JSON file
+    fetch('/data.json')
+      .then(response => response.json())
+      .then(data => {
+        const fullInventory = document.getElementById('full_inventory');
+        
+        // Loop through the users and create list items
+        data.inventory.forEach(item => {
+          const listItem = document.createElement('li');
+          listItem.textContent = item.name;
+          fullInventory.appendChild(listItem);
+        });
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>
